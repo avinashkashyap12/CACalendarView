@@ -19,4 +19,5 @@
 -(instancetype) initWithFrame:(CGRect)frame withDateComponenet:(CADateComponent *)dateComponent;
 -(void) setDefaultLayout;
 -(void) setSelectedLayout;
+-(void) setDateComponent:(CADateComponent *)dateComponent withDisablePreviousDate:(BOOL) value;
 @end

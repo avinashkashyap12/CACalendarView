@@ -15,6 +15,15 @@
 		FDB07B16203DB69700DF57F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB07B15203DB69700DF57F4 /* main.m */; };
 		FDB07B20203DB69800DF57F4 /* CACalendarSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB07B1F203DB69800DF57F4 /* CACalendarSampleTests.m */; };
 		FDB07B2B203DB69800DF57F4 /* CACalendarSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB07B2A203DB69800DF57F4 /* CACalendarSampleUITests.m */; };
+		FDB07B42203DB6DC00DF57F4 /* CADateLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB07B39203DB6DB00DF57F4 /* CADateLabel.m */; };
+		FDB07B45203DB6DC00DF57F4 /* CACalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB07B3E203DB6DB00DF57F4 /* CACalendarView.m */; };
+		FDB07B46203DB6DC00DF57F4 /* CACalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB07B40203DB6DC00DF57F4 /* CACalendarManager.m */; };
+		FDB07B4B203DB81400DF57F4 /* arrow_calendar_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB07B48203DB81300DF57F4 /* arrow_calendar_left@2x.png */; };
+		FDB07B4C203DB81400DF57F4 /* arrow_calendar_left.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB07B49203DB81400DF57F4 /* arrow_calendar_left.png */; };
+		FDB07B4D203DB81400DF57F4 /* arrow_calendar_left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB07B4A203DB81400DF57F4 /* arrow_calendar_left@3x.png */; };
+		FDB07B51203DB82000DF57F4 /* arrow_calendar_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB07B4E203DB82000DF57F4 /* arrow_calendar_right@3x.png */; };
+		FDB07B52203DB82000DF57F4 /* arrow_calendar_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB07B4F203DB82000DF57F4 /* arrow_calendar_right@2x.png */; };
+		FDB07B53203DB82000DF57F4 /* arrow_calendar_right.png in Resources */ = {isa = PBXBuildFile; fileRef = FDB07B50203DB82000DF57F4 /* arrow_calendar_right.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,19 @@
 		FDB07B26203DB69800DF57F4 /* CACalendarSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CACalendarSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB07B2A203DB69800DF57F4 /* CACalendarSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CACalendarSampleUITests.m; sourceTree = "<group>"; };
 		FDB07B2C203DB69800DF57F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB07B39203DB6DB00DF57F4 /* CADateLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CADateLabel.m; sourceTree = "<group>"; };
+		FDB07B3C203DB6DB00DF57F4 /* CACalendarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACalendarCollectionViewCell.h; sourceTree = "<group>"; };
+		FDB07B3D203DB6DB00DF57F4 /* CACalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACalendarView.h; sourceTree = "<group>"; };
+		FDB07B3E203DB6DB00DF57F4 /* CACalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CACalendarView.m; sourceTree = "<group>"; };
+		FDB07B3F203DB6DC00DF57F4 /* CACalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACalendarManager.h; sourceTree = "<group>"; };
+		FDB07B40203DB6DC00DF57F4 /* CACalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CACalendarManager.m; sourceTree = "<group>"; };
+		FDB07B41203DB6DC00DF57F4 /* CADateLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADateLabel.h; sourceTree = "<group>"; };
+		FDB07B48203DB81300DF57F4 /* arrow_calendar_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_calendar_left@2x.png"; sourceTree = "<group>"; };
+		FDB07B49203DB81400DF57F4 /* arrow_calendar_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_calendar_left.png; sourceTree = "<group>"; };
+		FDB07B4A203DB81400DF57F4 /* arrow_calendar_left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_calendar_left@3x.png"; sourceTree = "<group>"; };
+		FDB07B4E203DB82000DF57F4 /* arrow_calendar_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_calendar_right@3x.png"; sourceTree = "<group>"; };
+		FDB07B4F203DB82000DF57F4 /* arrow_calendar_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_calendar_right@2x.png"; sourceTree = "<group>"; };
+		FDB07B50203DB82000DF57F4 /* arrow_calendar_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_calendar_right.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +123,7 @@
 		FDB07B05203DB69700DF57F4 /* CACalendarSample */ = {
 			isa = PBXGroup;
 			children = (
+				FDB07B38203DB6B800DF57F4 /* CACalendar */,
 				FDB07B06203DB69700DF57F4 /* AppDelegate.h */,
 				FDB07B07203DB69700DF57F4 /* AppDelegate.m */,
 				FDB07B09203DB69700DF57F4 /* ViewController.h */,
@@ -130,6 +153,34 @@
 				FDB07B2C203DB69800DF57F4 /* Info.plist */,
 			);
 			path = CACalendarSampleUITests;
+			sourceTree = "<group>";
+		};
+		FDB07B38203DB6B800DF57F4 /* CACalendar */ = {
+			isa = PBXGroup;
+			children = (
+				FDB07B47203DB7E100DF57F4 /* Resourse */,
+				FDB07B3C203DB6DB00DF57F4 /* CACalendarCollectionViewCell.h */,
+				FDB07B3F203DB6DC00DF57F4 /* CACalendarManager.h */,
+				FDB07B40203DB6DC00DF57F4 /* CACalendarManager.m */,
+				FDB07B3D203DB6DB00DF57F4 /* CACalendarView.h */,
+				FDB07B3E203DB6DB00DF57F4 /* CACalendarView.m */,
+				FDB07B41203DB6DC00DF57F4 /* CADateLabel.h */,
+				FDB07B39203DB6DB00DF57F4 /* CADateLabel.m */,
+			);
+			path = CACalendar;
+			sourceTree = "<group>";
+		};
+		FDB07B47203DB7E100DF57F4 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				FDB07B49203DB81400DF57F4 /* arrow_calendar_left.png */,
+				FDB07B48203DB81300DF57F4 /* arrow_calendar_left@2x.png */,
+				FDB07B4A203DB81400DF57F4 /* arrow_calendar_left@3x.png */,
+				FDB07B50203DB82000DF57F4 /* arrow_calendar_right.png */,
+				FDB07B4F203DB82000DF57F4 /* arrow_calendar_right@2x.png */,
+				FDB07B4E203DB82000DF57F4 /* arrow_calendar_right@3x.png */,
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +289,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB07B4D203DB81400DF57F4 /* arrow_calendar_left@3x.png in Resources */,
+				FDB07B52203DB82000DF57F4 /* arrow_calendar_right@2x.png in Resources */,
 				FDB07B13203DB69700DF57F4 /* LaunchScreen.storyboard in Resources */,
+				FDB07B51203DB82000DF57F4 /* arrow_calendar_right@3x.png in Resources */,
+				FDB07B4C203DB81400DF57F4 /* arrow_calendar_left.png in Resources */,
+				FDB07B4B203DB81400DF57F4 /* arrow_calendar_left@2x.png in Resources */,
 				FDB07B10203DB69700DF57F4 /* Assets.xcassets in Resources */,
 				FDB07B0E203DB69700DF57F4 /* Main.storyboard in Resources */,
+				FDB07B53203DB82000DF57F4 /* arrow_calendar_right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +324,9 @@
 			files = (
 				FDB07B0B203DB69700DF57F4 /* ViewController.m in Sources */,
 				FDB07B16203DB69700DF57F4 /* main.m in Sources */,
+				FDB07B42203DB6DC00DF57F4 /* CADateLabel.m in Sources */,
+				FDB07B46203DB6DC00DF57F4 /* CACalendarManager.m in Sources */,
+				FDB07B45203DB6DC00DF57F4 /* CACalendarView.m in Sources */,
 				FDB07B08203DB69700DF57F4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +491,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PMUSA3XS3C;
 				INFOPLIST_FILE = CACalendarSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.curiousappz.CACalendarSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +506,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PMUSA3XS3C;
 				INFOPLIST_FILE = CACalendarSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.curiousappz.CACalendarSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

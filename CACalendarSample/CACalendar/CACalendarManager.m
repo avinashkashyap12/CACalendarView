@@ -34,6 +34,8 @@ static CACalendarManager *sharedInstance;
     self.monthShowing = date;
 }
 #pragma mark -
+//return number of days in a week in
+//[S, M, T, W, T, F, S]
 - (NSArray *)updateDayOfWeekLabels {
     NSArray *weekdays = [self.dateFormatter veryShortWeekdaySymbols];
     // adjust array depending on which weekday should be first
@@ -43,11 +45,11 @@ static CACalendarManager *sharedInstance;
                     arrayByAddingObjectsFromArray:[weekdays subarrayWithRange:NSMakeRange(0, firstWeekdayIndex)]];
     }
     
-    NSUInteger i = 0;
-    for (NSString *day in weekdays) {
-        NSLog(@"dat = %@", day);
-        i++;
-    }
+//    NSUInteger i = 0;
+//    for (NSString *day in weekdays) {
+//        NSLog(@"dat = %@", day);
+//        i++;
+//    }
     return weekdays;
 }
 #pragma mark -
@@ -97,6 +99,7 @@ static CACalendarManager *sharedInstance;
 -(void) setUserDisplayMonth:(NSDate *)date{
     self.monthShowing = date;
 }
+//return all date for current month
 -(NSArray *)getDaysListForSelectedMonth{
     return [self getCalendarMonthDaysForDate:self.monthShowing];
 }

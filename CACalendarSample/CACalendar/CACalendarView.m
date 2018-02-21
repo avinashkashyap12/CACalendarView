@@ -8,8 +8,7 @@
 
 #import "CACalendarView.h"
 #import "CACalendarManager.h"
-#import "CACalendarCollectionViewCell.h"
-#import "CustomFlowLayout.h"
+#import "CADateLabel.h"
 
 @implementation CACalendarView
 
@@ -49,10 +48,12 @@
     selectedIndex = -1;
     selectedDateComponent = nil;
     
-   // [self addCollectioView];
     [self displayMonthCalendar];
-    //[self addAllDayViews];
     
+}
+-(void) setIsDisablePreviousDate:(BOOL)isDisablePreviousDate{
+    _isDisablePreviousDate = isDisablePreviousDate;
+    [self addAllDayViews];
 }
 -(void) addUperHeader{
     CGFloat x = 10;
@@ -97,6 +98,7 @@
     UIView *daysbackView = [[UIView alloc] initWithFrame:CGRectMake(0, 35, self.bounds.size.width, 35)];
     daysbackView.backgroundColor = [UIColor whiteColor];
     [self addSubview:daysbackView];
+    //set week day lable
     NSArray *weekDays = [[CACalendarManager sharedInstance] updateDayOfWeekLabels];
     CGFloat x = 1;
     CGFloat y = 0;
@@ -113,6 +115,7 @@
     }
 }
 -(void) addAllDayViews{
+    // get number of rows
     NSInteger numberOfRows = [self getNumberOfRows];
     CGFloat x = 1;
     CGFloat y = 1;
@@ -136,10 +139,11 @@
                 dateLabel = [[CADateLabel alloc] initWithFrame:CGRectMake(x, y, width, width) withDateComponenet:self.dataList[tag]];
                 dateLabel.font = KDefaultFont;
                 dateLabel.tag = tag+KDayTagPadding;
+                // add tap gesture on date view
                 [dateLabel addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSelectionTapGesture:)]];
             }//end if block null check
             [self.containerView addSubview:dateLabel];
-            [dateLabel setDateComponent:self.dataList[tag]];
+            [dateLabel setDateComponent:self.dataList[tag] withDisablePreviousDate:self.isDisablePreviousDate];
         }//end inner for loop
     }//end outer for loop
     //------
@@ -170,10 +174,11 @@
         }
     }
 }
-#pragma mark - 
+#pragma mark -
+// handle tap on date view(Date selection)
 -(void) handleSelectionTapGesture:(UITapGestureRecognizer *)tapGesture{
     CADateLabel *label = (CADateLabel *)tapGesture.view;
-    if (label.dateComponent.dateType == DisplayDateTypePast) {
+    if (label.dateComponent.dateType == DisplayDateTypePast && self.isDisablePreviousDate == true) {
         return;
     }
     [self updateSelectedDateView:label];
@@ -212,7 +217,6 @@
 -(void) displayMonthCalendar{
     self.dataList = [[CACalendarManager sharedInstance] getDaysListForSelectedMonth];
     self.currentMonthLabel.text = [[CACalendarManager sharedInstance] getCurrentMonthText];
-    //[self.collectionView reloadData];
     [self addAllDayViews];
 }
 #pragma mark -
@@ -220,50 +224,5 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectedDate:)]) {
         [self.delegate didSelectedDate:date];
     }
-}
-#pragma mark -
--(void) addCollectioView{
-    CustomFlowLayout* flowLayout = [[CustomFlowLayout alloc] init];
-    flowLayout.minimumLineSpacing = 1;
-    flowLayout.minimumInteritemSpacing = 1;
-    flowLayout.headerReferenceSize = CGSizeMake(0, 0);
-    flowLayout.footerReferenceSize = CGSizeZero;
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    //set frame
-    CGRect frame = CGRectMake(0, 35, self.bounds.size.width, self.bounds.size.height);
-    self.collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:flowLayout];
-    self.collectionView.showsHorizontalScrollIndicator = NO;
-    self.collectionView.showsVerticalScrollIndicator = NO;
-    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    [self.collectionView registerClass:[CACalendarCollectionViewCell class] forCellWithReuseIdentifier:@"CACalendarCellIdentifier"];
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    [self addSubview:self.collectionView];
-}
--(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.dataList.count;
-}
--(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellIdentifier = @"CACalendarCellIdentifier";
-    CACalendarCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    CADateComponent *component =self.dataList[indexPath.row];
-    [cell.dateLabel setDateComponent:component];
-    if (selectedIndexPath == indexPath) {
-        [cell.dateLabel setSelectedLayout];
-    }
-    else{
-        [cell.dateLabel setDefaultLayout];
-    }
-    return cell;
-}
--(CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat width = collectionView.frame.size.width/7-6;
-    return CGSizeMake(width, width);
-}
--(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    selectedIndexPath = indexPath;
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    [self.collectionView reloadData];
 }
 @end

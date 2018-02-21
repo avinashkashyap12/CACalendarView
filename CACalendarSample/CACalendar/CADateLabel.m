@@ -43,6 +43,19 @@
     self.backgroundColor = KDefaultColor;
     self.font = KDefaultFont;
 }
+-(void) setDateComponent:(CADateComponent *)dateComponent withDisablePreviousDate:(BOOL) value{
+    _dateComponent = dateComponent;
+    if (dateComponent.dateType == DisplayDateTypePast && value == true) {
+        self.textColor = [UIColor lightGrayColor];
+    }
+    else{
+        self.textColor = [UIColor blackColor];
+    }
+    self.text = [self getDayFormDate:dateComponent.date];
+    //-------check and set curent date
+    self.layer.borderWidth = dateComponent.dateType == DisplayDateTypeCurrent ? 1.0 : 0.0;
+    self.font = dateComponent.dateType == DisplayDateTypeCurrent ? KSelectedFont : KDefaultFont;
+}
 -(void) setDateComponent:(CADateComponent *)dateComponent{
     _dateComponent = dateComponent;
     if (dateComponent.dateType == DisplayDateTypePast) {

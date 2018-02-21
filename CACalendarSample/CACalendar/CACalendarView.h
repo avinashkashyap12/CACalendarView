@@ -15,7 +15,7 @@
 @protocol CACalendarDelegate;
 
 
-@interface CACalendarView : UIView<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface CACalendarView : UIView
 {
     NSIndexPath *selectedIndexPath;
     NSInteger selectedIndex;
@@ -24,16 +24,21 @@
 }
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) UIView *containerView;
+//button for display previous month
 @property (nonatomic, strong) UIButton *previousButton;
+//button for display next month
 @property (nonatomic, strong) UIButton *nextButton;
+//display current month with year
 @property (nonatomic, strong) UILabel *currentMonthLabel;
-@property (nonatomic, strong) UICollectionView *collectionView;
+//disable previous date from current date
+@property (nonatomic, assign) BOOL isDisablePreviousDate;
+
 @property (nonatomic, strong) NSArray *dataList;
 @property (nonatomic, weak) id <CACalendarDelegate> delegate;
+//set date on calendar. Default is false
 -(void) setSetectedDate:(NSDate *)date;
 @end
+
 @protocol CACalendarDelegate <NSObject>
-
 -(void) didSelectedDate:(NSDate *)date;
-
 @end
