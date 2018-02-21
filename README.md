@@ -18,5 +18,7 @@ Add below code for display CACalendarView
       NSLog(@"selected date = %@  and string = %@", date, [formatter stringFromDate:date]);
     }
     
-    run the application, 
+    run the application, you can see CACalendarView
+    
+    ![alt tag](SS/CACalendar.PNG)
      

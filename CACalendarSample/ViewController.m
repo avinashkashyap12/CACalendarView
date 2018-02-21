@@ -31,7 +31,7 @@
     CGSize size = [UIScreen mainScreen].bounds.size;
     calendarView = [[CACalendarView alloc] initWithFrame:CGRectMake(0, 70, size.width, size.height-200)];
     //remove comment if want to disable previous date
-    //calendarView.isDisablePreviousDate = true;
+    calendarView.isDisablePreviousDate = true;
     calendarView.backgroundColor  = [UIColor whiteColor];
     calendarView.delegate = self;
     //set selected date
