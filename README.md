@@ -20,12 +20,12 @@ Add below code for display CACalendarView
     
     run the application, you can see CACalendarView
     
-    ![alt text](https://raw.githubusercontent.com/avinashkashyap12/CACalendarView/master/SS/CACalendar.PNG)
+    ![](https://raw.githubusercontent.com/avinashkashyap12/CACalendarView/master/SS/CACalendar.PNG)
     
     if you want to disable selection of  previous dates just add a line of code
     calendarView.isDisablePreviousDate = true; 
     
-    ![alt text](https://raw.githubusercontent.com/avinashkashyap12/CACalendarView/master/SS/CACalendar_dis.PNG)
+    ![](https://raw.githubusercontent.com/avinashkashyap12/CACalendarView/master/SS/CACalendar_dis.PNG)
     
     
     
