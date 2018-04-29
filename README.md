@@ -30,6 +30,7 @@ Add below code for display CACalendarView
     
     
   you can also set date on calendar by using below code
+  
     [calendarView setSetectedDate:[NSDate date]];
     
      
