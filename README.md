@@ -17,19 +17,19 @@ Add below code for display CACalendarView
           [formatter setDateFormat:@"yyyy-MM-dd"];
       NSLog(@"selected date = %@  and string = %@", date, [formatter stringFromDate:date]);
     }
-    
-    run the application, you can see CACalendarView
-    
+
+#
+ run the application, you can see CACalendarView
     ![cacalendar](images/CACalendar.png)
-    ![cacalendar](https://user-images.githubusercontent.com/9897883/39405178-11ca6a20-4bbe-11e8-9277-7aed47946066.png)
     
-    if you want to disable selection of  previous dates just add a line of code
+ if you want to disable selection of  previous dates just add a line of code
+    
     calendarView.isDisablePreviousDate = true; 
     
-    ![](images/CACalendar_dis.png)
-    ![cacalendar_dis](https://user-images.githubusercontent.com/9897883/39405184-42596826-4bbe-11e8-95f1-baa3bea71e6c.png)
+ ![](images/CACalendar_dis.png)
     
-    you can also set date on calendar by using below code
+    
+  you can also set date on calendar by using below code
     [calendarView setSetectedDate:[NSDate date]];
     
      
