@@ -20,5 +20,17 @@ Add below code for display CACalendarView
     
     run the application, you can see CACalendarView
     
-    ![alt tag](SS/CACalendar.PNG)
+    ![](SS/CACalendar.PNG)
+    
+    if you want to disable selection of  previous dates just add a line of code
+    calendarView.isDisablePreviousDate = true; 
+    
+    ![](SS/CACalendar_dis.PNG)
+    
+    
+    
+    
+    you can also set date on calendar by using below code
+    [calendarView setSetectedDate:[NSDate date]];
+    
      
